@@ -1,0 +1,150 @@
+.block
+  padding: 80px 0
+  // background: #f6fffd
+  &--white
+    background: #fff
+  h2
+    font-size: 48px
+    color: $fontColor
+    line-height: 1
+    font-weight: 700
+    font-family: $ptsans
+    margin-bottom: 40px
+    span
+      font-family: $sofia
+  // &__carousel
+  //   display: flex
+  //   align-items: flex-start
+  //   justify-content: space-around
+  //   flex-wrap: wrap
+  &__item
+    padding: 0 10px
+    width: 100%
+    text-align: center
+    a
+      display: block
+      width: 100%
+    p
+      font-size: 16px
+      font-family: $ptsans
+      color: #575757
+      margin-top: 15px
+    img
+      width: 100%
+      height: auto
+
+  .swiper-container
+    padding: 0 40px 40px
+    margin: 0 -40px
+    width: calc(100% + 80px)
+
+  .swiper-pagination
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+
+  .swiper-pagination-bullet
+    font-size: 0
+    border: none
+    color: transparent
+    background: transparent
+    width: 12px
+    height: 12px
+    border: 1px solid green
+    transition: all 0.25s ease-in-out
+    border-radius: 50%
+    padding: 0
+    cursor: pointer
+    margin: 5px
+
+  .swiper-pagination-bullet-active
+    background: green
+
+  .swiper-button-next
+    display: block
+    font-size: 0
+    border: none
+    color: transparent
+    background: transparent
+    width: 30px
+    height: 100px
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center center
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    cursor: pointer
+    background-image: url(../img/right.png)
+    right: 0
+
+  .swiper-button-prev
+    display: block
+    font-size: 0
+    border: none
+    color: transparent
+    background: transparent
+    width: 30px
+    height: 100px
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center center
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    cursor: pointer
+    background-image: url(../img/left.png)
+    left: 0
+  
++r($desktop)
+  .block
+    padding: 60px 0
+    h2
+      font-size: 32px
+
+
+
++r($tablet)
+  .block
+    padding: 40px 0
+    h2
+      font-size: 24px
+      margin-bottom: 20px
+    .slick-arrow
+      display: none !important
+    .slick-dots
+      margin-top: 10px
+      display: block !important
+
+    .swiper-button-next
+      display: none
+    .swiper-button-prev
+      display: none
+
+    .swiper-container
+      padding: 0 0 30px
+      margin: 0 auto
+      width: 100%
+
+
+.mfp-zoom-in
+  .mfp-with-anim
+    opacity: 0
+    transition: all 0.2s ease-in-out
+    transform: scale(0.8)
+  &.mfp-bg
+    opacity: 0
+    transition: all 0.3s ease-out
+  &.mfp-ready
+    .mfp-with-anim
+      opacity: 1
+      transform: scale(1)
+    &.mfp-bg
+      opacity: 0.8
+  &.mfp-removing 
+    .mfp-with-anim
+      transform: scale(0.8);
+      opacity: 0
+    &.mfp-bg
+      opacity: 0

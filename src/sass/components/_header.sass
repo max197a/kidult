@@ -1,0 +1,137 @@
+/* HEADER
+.header
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  background: #fff
+  z-index: 100
+  transform: translate3d(0,0,0)
+  border-bottom: 1px solid #d1d1d1
+  .container
+    max-width: 1200px
+    padding: 0 20px
+  &.is-fixed-start
+    position: fixed
+    background: #fff
+    transform: translate3d(0,-100%,0)
+    border-bottom: 1px solid #d1d1d1
+    .header__wrapper
+      padding: 15px 0
+  &.is-fixed
+    transition: all $transitionSpeed $ease
+    transform: translate3d(0,0,0)
+  &__logo
+    font-size: 0
+    margin-top: 3px
+    margin-bottom: -3px
+    img
+      height: 51px
+      width: auto
+  &__wrapper
+    padding: 17px 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__links
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-left: auto
+  &__item
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    p
+      font-size: 16px
+      font-family: $ptsans
+      font-weight: 700
+      line-height: 1
+      color: $fontColor
+    a
+      display: inline-block
+      margin-top: 5px
+      font-size: 16px
+      color: $fontColor
+      font-family: $ptsans
+      position: relative
+      &:hover
+        &:before
+          width: 100%
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        width: 0
+        height: 1px
+        background: $fontColor
+        left: 0
+        bottom: -3px
+        transition: all $transitionSpeed $ease
+
+  &__mail-image
+    font-size: 0
+    margin-right: 13px
+    img
+      height: 39px
+      width: auto
+
+  
+
++r($tablet)
+  .header
+    position: fixed
+    background: #fff
+    transform: translate3d(0,0,0)
+    top: 0
+    border-bottom: 1px solid #d1d1d1
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      bottom: -1px
+      left: 0
+      width: 100%
+      height: 1px
+      background: #d1d1d1
+    &.is-fixed-start
+      transform: translate3d(0,0,0)
+      .header__wrapper
+        padding: 13px 0
+    &.is-fixed
+      padding: 0
+    &__wrapper
+      padding: 13px 0
+      background: #fff
+    &__logo
+      margin-top: 0
+      img
+        height: 37px
+    &__item
+      padding-top: 0
+      align-items: center
+      p
+        font-size: 14px
+        display: none
+      a
+        font-size: 18px
+        margin-top: 0
+        font-weight: 700
+    &__mail-image
+      img
+        height: 39px
+
++r($mobile)
+  .header
+    &__logo
+      img
+        height: 35px
+    &__mail-image
+      img
+        height: 25px
+    &__item
+      margin-left: 0
+      a
+        font-size: 14px
+        margin-top: 0
+        font-weight: 700
