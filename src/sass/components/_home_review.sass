@@ -1,22 +1,51 @@
+h2
+  font-size: 48px
+  color: $fontColor
+  line-height: 1
+  font-weight: 700
+  font-family: $ptsans
+  // margin-bottom: 40px
+  color: #fff
+  span
+    font-family: $sofia
+    &.love
+      color: #e63329
+    &.family
+      color: #d62570
+    &.symbols
+      color: #9d1f81
+    &.spirit
+      color: #6758a1
+    &.free
+      color: #1d71b8
+    &.special
+      color: #249eb4
+    &.special
+      color: #249eb4
+    &.animal
+      color: #1fab94
+    &.nature
+      color: #96aa2c
+    &.philo
+      color: #ef8702
+    &.irony
+      color: #f9b000
+    &.charity
+      color: #bf1d47
+  
 .block
   padding: 80px 0
   // background: #f6fffd
   &--white
     background: #fff
-  h2
-    font-size: 48px
-    color: $fontColor
-    line-height: 1
-    font-weight: 700
-    font-family: $ptsans
-    margin-bottom: 40px
-    span
-      font-family: $sofia
-  // &__carousel
-  //   display: flex
-  //   align-items: flex-start
-  //   justify-content: space-around
-  //   flex-wrap: wrap
+
+  &__bg
+    // min-height: 150px
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    h2
+      padding: 100px 0
   &__item
     padding: 0 10px
     width: 100%
@@ -33,10 +62,13 @@
       width: 100%
       height: auto
 
+  .swiper-wrapper
+    // padding: 0 40px
+
   .swiper-container
-    padding: 0 40px 40px
-    margin: 0 -40px
-    width: calc(100% + 80px)
+    padding: 0 0 50px
+    // margin: 0 -40px
+    // width: calc(100% + 80px)
 
   .swiper-pagination
     position: absolute
@@ -78,6 +110,7 @@
     cursor: pointer
     background-image: url(../img/right.png)
     right: 0
+    display: none
 
   .swiper-button-prev
     display: block
@@ -96,21 +129,26 @@
     cursor: pointer
     background-image: url(../img/left.png)
     left: 0
+    display: none
   
+  p.info
+    font-size: 24px
+    line-height: 1.3
+
 +r($desktop)
   .block
     padding: 60px 0
-    h2
-      font-size: 32px
+  h2
+    font-size: 32px
 
 
 
 +r($tablet)
+  h2
+    font-size: 30px
+    // margin-bottom: 20px
   .block
-    padding: 40px 0
-    h2
-      font-size: 24px
-      margin-bottom: 20px
+    padding: 30px 0
     .slick-arrow
       display: none !important
     .slick-dots
@@ -123,9 +161,15 @@
       display: none
 
     .swiper-container
-      padding: 0 0 30px
+      padding: 0 0 40px
       margin: 0 auto
       width: 100%
+    p.info
+      font-size: 18px
+
+    &__bg
+      h2
+        padding: 50px 0
 
 
 .mfp-zoom-in
